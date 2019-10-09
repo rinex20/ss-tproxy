@@ -1,0 +1,17 @@
+[Unit]
+Description=Start ss-redir
+Requires=network-online.target
+After=network.target network-online.target multi-user.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=/etc/default/ss
+ExecStart=ss-redir $SSREDIR_OPTS
+Restart=on-failure
+RestartSec=5
+KillMode=process
+
+
+[Install]
+WantedBy=network-online.target
