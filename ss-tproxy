@@ -311,7 +311,8 @@ update_gfwlist() {
 }
 
 update_china_domain() {
-    local url=''
+    local url='https://raw.githubusercontent.com/rinex20/ss-tproxy/master/accelerated-domains.china.conf'
+    
     
 }
 
