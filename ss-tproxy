@@ -310,6 +310,11 @@ update_gfwlist() {
     echo "$data" | $base64_decode | { perl -pe "$gfwlist_txt_perl_script_string"; gfwlist_txt_append_domain_names; } | sort | uniq >$file_gfwlist_txt
 }
 
+update_china_domain() {
+    local url=''
+    
+}
+
 update_chnroute() {
     local url='http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest'
     local data; data=$(curl -4sSkL "$url") || log_error "download failed, exit-code: $?"
