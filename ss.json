@@ -1,0 +1,11 @@
+{
+    "server": "服务器地址",
+    "server_port": 8081,
+    "local_address": "0.0.0.0",
+    "local_port": 60080,
+    "method": "aes-256-gcm",
+    "password": "用户密码",
+    "no_delay": true,
+    "fast_open": true,
+    "reuse_port": true
+}
